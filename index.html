@@ -1,12 +1,433 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Just99Apps</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>99Apps</title>
+
+<meta name="description"
+content="Discover beautifully designed Android apps by 99Apps.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:
+radial-gradient(circle at top left,#5b21b6 0%,transparent 35%),
+radial-gradient(circle at bottom right,#2563eb 0%,transparent 35%),
+#0b1120;
+color:#fff;
+min-height:100vh;
+overflow-x:hidden;
+}
+
+.container{
+max-width:1300px;
+margin:auto;
+padding:50px 25px;
+}
+
+/* Hero */
+
+.hero{
+text-align:center;
+margin-bottom:70px;
+}
+
+.logo{
+width:120px;
+height:120px;
+border-radius:35px;
+object-fit:cover;
+box-shadow:0 15px 40px rgba(99,102,241,.35);
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:3rem;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#b7bfd8;
+font-size:1.1rem;
+max-width:650px;
+margin:auto;
+line-height:1.7;
+}
+
+/* Grid */
+
+.apps{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+gap:28px;
+}
+
+/* Card */
+
+.card{
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:28px;
+
+padding:30px;
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-50%;
+
+left:-50%;
+
+width:220px;
+
+height:220px;
+
+background:radial-gradient(#6366f133,transparent 70%);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+border-color:#6366f1;
+
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+width:95px;
+
+height:95px;
+
+border-radius:24px;
+
+object-fit:cover;
+
+margin-bottom:22px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+.card h2{
+
+font-size:1.35rem;
+
+margin-bottom:10px;
+
+}
+
+.card p{
+
+color:#b8c0d9;
+
+line-height:1.7;
+
+font-size:.95rem;
+
+min-height:70px;
+
+}
+
+.button{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+margin-top:25px;
+
+padding:14px 22px;
+
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+
+border-radius:14px;
+
+text-decoration:none;
+
+color:#fff;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.button:hover{
+
+transform:scale(1.05);
+
+}
+
+.status-tag{
+    position:absolute;
+    top:18px;
+    right:18px;
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.4px;
+    color:#fff;
+    backdrop-filter:blur(10px);
+    z-index:2;
+}
+
+.live{
+    background:linear-gradient(135deg,#10b981,#059669);
+}
+
+.build{
+    background:linear-gradient(135deg,#f59e0b,#d97706);
+}
+
+.coming{
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+}
+
+/* Footer */
+
+footer{
+
+margin-top:80px;
+
+padding:35px;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+text-align:center;
+
+color:#94a3b8;
+
+}
+
+footer a{
+
+color:#cbd5e1;
+
+text-decoration:none;
+
+margin:0 10px;
+
+}
+
+footer a:hover{
+
+color:#fff;
+
+}
+
+.copy{
+
+margin-top:18px;
+
+font-size:.9rem;
+
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+.hero h1{
+
+font-size:2.2rem;
+
+}
+
+.logo{
+
+width:90px;
+
+height:90px;
+
+}
+
+.apps{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
-  <p>
-    Redirecting to
-    <a href="/apps/">Just99Apps Apps</a>...
-  </p>
+
+<div class="container">
+
+<div class="hero">
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUCU5TkALEFja42P_J190JXxFxXVBXKqgPAFLRu-AJMheBm4D1FtCDDhcEYBTtd5E-sScB9srSBmh_A9UJJrj23WfMReRq7Erf_gPKQuyAvHiyMKoTLHAIs7TYv20_6CzvXA63O9aLA9QYiUyZFyMb3PIGFs5oPEEMREmIx6AIeW2xLEuwRs2PVfy3lA8/s320/file_000000004990720895a95ab9ed5b9e15.png" class="logo">
+
+<h1>99Apps</h1>
+
+<p>
+Beautiful, lightweight and useful Android applications crafted with simplicity and performance in mind.
+</p>
+
+</div>
+
+<div class="apps">
+
+<div class="card">
+<span class="status-tag live">🌟 Live</span>
+<img src="images/simple_torch_app.jpg" class="icon">
+
+<h2>Simple Torch</h2>
+
+<p>
+Modern flashlight with Shake to Toggle, SOS, Strobe Mode, colorful themes and quick access.
+</p>
+
+<a class="button"
+href="https://play.google.com/store/apps/details?id=com.apps99.simpletorch"
+target="_blank">
+
+View on Play Store
+
+</a>
+
+</div>
+
+<div class="card">
+<span class="status-tag live">🌟 Live</span>
+<img src="images/love_my_money_app.png" class="icon">
+
+<h2>LoveMyMoney</h2>
+
+<p>
+Track expenses, create budgets, manage bills, savings goals and monitor your finances effortlessly.
+</p>
+
+<a class="button"
+href="https://play.google.com/store/apps/details?id=com.apps99.financetracker"
+target="_blank">
+
+View on Play Store
+
+</a>
+
+</div>
+
+<div class="card">
+<span class="status-tag live">🌟 Live</span>
+<img src="https://lh3.googleusercontent.com/_STVMx99Asl6rVi3-M-UQ5SelpT-2iJNlAARNU-kVqycmuqlS1dY4G0CNTeZly7KNaNgtWBoNeYkfFriT-Jj" class="icon">
+
+<h2>LoveMyMoney Pro</h2>
+
+<p>
+Track expenses, create budgets, manage bills, savings goals and monitor your finances effortlessly.
+</p>
+
+<a class="button"
+href="https://play.google.com/store/apps/details?id=com.apps99.financetrackerpro"
+target="_blank">
+
+View on Play Store
+
+</a>
+
+</div>
+
+<div class="card">
+<span class="status-tag live">🌟 Live</span>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtnelJysneIwVWZxz2uNF1oFvdV06SFVmkWKbJan_5DsSks82-a7NFimtgTSHgQFpHoF9eiu9m7SrcDd8IrZs5pFtMZ6UxEWF6-Pf4GF4QFLzR1YS-XF3ias0koCSbLp6AfjGZn6cwrDlTpxJl7D2ys5YrqT_9Fwzkfi_l3Hcpum882z6j1_F1tCJdQN8/s320/tracknote_logo.png" class="icon">
+
+<h2>TrackNotes: Notes & Reminders</h2>
+
+<p>
+Save notes, organize ideas and set reminders to keep your day on track.
+</p>
+
+<a class="button"
+href="https://play.google.com/store/apps/details?id=com.apps99.tracknotes"
+target="_blank">
+
+View on Play Store
+
+</a>
+
+</div>
+
+
+<div class="card">
+<span class="status-tag coming">✨ COMING SOON</span>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4Y7DrYGASbMT-XJh-bTS9xxXAGC76AwMPZRmoI_I67hsFGvSFXv1OdfZC9otzkDMxKkPpzqNUxYY8owG7-nLtaxoXT9RDN0kTDa72xVzaJ5srWhRIpKBOLfNwSOuDT9Qr0i4vJH0GmE3wFjGTAYjNVrSfrTm96Ne2c1kf454rrp19QwF7PpltkiZ9AMU/s320/file_0000000065a0720ba18944151166e925.png" class="icon">
+
+<h2>GST Plus ~ Smart Calculator</h2>
+
+<p>
+Calculate GST instantly with discount, profit, margin, EMI & business tools.
+</p>
+
+<a class="button"
+href="#"
+target="_blank">
+
+View on Play Store
+
+</a>
+
+</div>
+
+<!-- end -->
+    
+
+</div>
+
+</div>
+
+<footer>
+
+<a href="privacy-policy.html">Privacy Policy</a>
+
+•
+
+<a href="mailto:hello99apps@outlook.com">Contact</a>
+
+<div class="copy">
+© 2026 <strong>99Apps</strong>. All Rights Reserved.
+</div>
+
+</footer>
+
 </body>
 </html>
